@@ -1,0 +1,272 @@
+/* reset */
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    -ms-overflow-style: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding: 0 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* style */
+
+header {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000000 30%, #ca6725);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000000 30%, #ca6725);
+    width: 100%;
+    color: whitesmoke;
+    opacity: 0.9;
+    z-index: 1;
+}
+
+.brand-name-nav {
+    flex-grow: 10;
+    display: flex;
+}
+
+.brand-name-nav h3 {
+    flex-grow: 10;
+}
+
+#header-img {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+#nav-bar ul {
+    display: flex;
+}
+
+.nav-link{
+    color: whitesmoke;
+    font-size: 1.2rem;
+}
+.nav-link:hover{
+    text-shadow: 0px 1px 5px whitesmoke;
+}
+
+/* contents between header and footer container  */
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    background-color: whitesmoke;
+}
+
+.center-grid{
+    grid-column: 2/3;
+}
+
+/* home section  */
+#home{
+    grid-column: 1/-1;
+}
+
+#home img{
+    display: block;
+    opacity: 0.5;
+    max-height: 650px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#home h1{
+    position: relative;
+    bottom: 150px;
+    margin: auto;
+    font-size: 5rem;
+    padding: 0;
+    text-shadow: 1px 10px 10px grey;
+    font-family: 'Lexend Tera', sans-serif;;
+}
+
+/* common title style for sub headings
+used in feature and pricings section */
+.title{
+    background-color: #ca6725c2;
+    border-radius: 0.25rem;
+    padding: 0.5rem 2rem;
+    margin-top:0 ;
+    color: rgb(0, 0, 0);
+}
+.title-description{
+    color: rgb(92, 91, 91);
+    line-height: 1.8rem;
+}
+
+/* feature section  */
+#feature{
+    display: flex;
+}
+
+#feature div{
+    margin: 0 2rem 1.5rem;
+    box-sizing: border-box;
+}
+
+/* demo video section  */
+.demo{
+    padding: 2rem 0;
+    grid-column: 1/-1;
+}
+iframe{
+    max-width: 900p;
+    max-height: 500px;
+}
+
+/* pricing section */
+#pricing{
+    margin: 1rem auto 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+#pricing ul{
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    line-height: 2rem;
+}
+
+.product-price{
+    width: 100;
+    border: 1px solid #ca6725b4;
+    margin: 0 0 1rem;
+    padding: 0 2rem;
+}
+
+.product-price .title{
+    margin-top: 1rem;
+}
+
+/* contact section  */
+form{
+    margin: 1rem auto 2rem;
+}
+form input{
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+form input[type="email"]{
+    width: 50%;
+    padding: 1rem 3rem;
+    border: 2px solid #ca6725;
+    border-radius: 0.5rem;
+    color: rgb(92, 91, 91);
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
+form input[type="submit"]{
+    color: whitesmoke;
+    border-radius: 0.5rem;
+    padding: 0.7rem 3rem;
+    font-size: 1.2rem;
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #000000 30%, #ca6725);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #000000 30%, #ca6725);
+    box-shadow: black;
+    border-color: black;
+}
+
+form input[type="submit"]:hover{
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000000 30%, #ca6725);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000000 30%, #ca6725);
+    transform: scale(1.2);
+}
+
+
+/* footer sector */
+footer{
+    padding: 1rem;
+    background: black;
+    color: grey;
+    font-size: 0.8rem;
+}
+
+/* media queries for tabs */
+@media (max-width: 950px){
+    .main-container{
+        grid-template-columns: 100px 1fr 100px ;
+    }
+    #home h1{
+        font-size: 2.5rem;
+        bottom: 80px;
+    }
+    #feature, #pricing{
+        flex-direction: column;
+    }
+    .demo{
+        padding: 1rem 0;
+    }
+    iframe{
+        width: 100%;
+        max-height: 400px;
+    }
+}
+
+/* media queries for mobiles */
+@media (max-width: 6.9in){
+    #header-img{
+        margin: 5px;
+    }
+    .brand-name-nav {
+        flex-direction: column;
+        margin-left: 1rem;
+        text-align: left;
+    }
+    #nav-bar ul{
+        padding: 0;
+        margin: 0 0 0.5rem;
+    }
+    #nav-bar ul li{
+        text-align: left;
+        padding: 0 1rem 0 0;
+    }
+    .nav-link{
+        font-size: 1.1rem;
+    }
+    .main-container{
+        grid-template-columns: 50px 1fr 50px ;
+    }
+    iframe{
+        max-height: 280px;
+    }
+}

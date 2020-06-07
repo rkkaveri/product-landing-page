@@ -9,5 +9,5 @@ Well, it was a designing project from [Responsive Web Design Project](https://ww
 * Flexbox
 * Canva (for making the logo)
 
-## Check the final outcome of project right here 
+### Check the final outcome of project right here 
 ## [Click me!](https://rkkaveri.github.io/product-landing-page/)

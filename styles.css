@@ -118,6 +118,9 @@ header {
     padding: 0;
     text-shadow: 1px 10px 10px grey;
     font-family: 'Lexend Tera', sans-serif;;
+    /* background: -webkit-linear-gradient(-90deg, rgb(0, 0, 0) 90%, rgb(0, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }
 
 /* common title and it's description style for sub headings
@@ -237,8 +240,8 @@ footer{
         grid-template-columns: 100px 1fr 100px ;
     }
     #home h1{
-        font-size: 2.5rem;
-        bottom: 80px;
+        font-size: 4rem;
+        bottom: 100px;
     }
     #feature, #pricing{
         flex-direction: column;
@@ -278,6 +281,10 @@ footer{
     }
     .main-container{
         grid-template-columns: 50px 1fr 50px ;
+    }
+    #home h1{
+        font-size: 2.5rem;
+        bottom: 70px;
     }
     iframe{
         max-height: 280px;

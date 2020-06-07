@@ -1,4 +1,13 @@
-/* reset */
+/* setting colors for root */
+:root{
+    --primary-orange-color : #ca6725;
+    --secondary-black-color : #000000;
+    --primary-orange-alpha : #ca6725c2;
+    /* used for bacground : whitesmoke */
+    --descriptive-font-color : rgb(92, 91, 91);
+}
+
+/* reset default styling*/
 html,
 body {
     width: 100%;
@@ -38,11 +47,11 @@ header {
     position: fixed;
     justify-content: space-between;
     align-items: center;
-    background: #000000;
+    background: var(--secondary-black-color);
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #000000 30%, #ca6725);
+    background: -webkit-linear-gradient(to right, var(--secondary-black-color) 30%, var(--primary-orange-color));
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #000000 30%, #ca6725);
+    background: linear-gradient(to right, var(--secondary-black-color) 30%, var(--primary-orange-color));
     width: 100%;
     color: whitesmoke;
     opacity: 0.9;
@@ -83,6 +92,7 @@ header {
     background-color: whitesmoke;
 }
 
+/* to make the sections center align */
 .center-grid{
     grid-column: 2/3;
 }
@@ -110,17 +120,17 @@ header {
     font-family: 'Lexend Tera', sans-serif;;
 }
 
-/* common title style for sub headings
+/* common title and it's description style for sub headings
 used in feature and pricings section */
 .title{
-    background-color: #ca6725c2;
+    background-color: var(--primary-orange-alpha);
     border-radius: 0.25rem;
     padding: 0.5rem 2rem;
     margin-top:0 ;
     color: rgb(0, 0, 0);
 }
 .title-description{
-    color: rgb(92, 91, 91);
+    color:var(--descriptive-font-color);
     line-height: 1.8rem;
 }
 
@@ -131,7 +141,6 @@ used in feature and pricings section */
 
 #feature div{
     margin: 0 2rem 1.5rem;
-    box-sizing: border-box;
 }
 
 /* demo video section  */
@@ -160,7 +169,7 @@ iframe{
 
 .product-price{
     width: 100;
-    border: 1px solid #ca6725b4;
+    border: 1px solid var(--primary-orange-alpha);
     margin: 0 0 1rem;
     padding: 0 2rem;
 }
@@ -177,38 +186,39 @@ form input{
     display: block;
     text-align: center;
     margin: auto;
-}
+    font-size: 20px;
+} 
 
-form input[type="email"]{
+.form-input-style{
     width: 50%;
     padding: 1rem 3rem;
-    border: 2px solid #ca6725;
+    border: 2px solid var(--primary-orange-color);
     border-radius: 0.5rem;
-    color: rgb(92, 91, 91);
+    color:var(--descriptive-font-color);
     background-color: white;
     margin-bottom: 1rem;
 }
 
-form input[type="submit"]{
+.btn{
     color: whitesmoke;
     border-radius: 0.5rem;
     padding: 0.7rem 3rem;
     font-size: 1.2rem;
-    background: #000000;
+    background: var(--secondary-black-color);
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #000000 30%, #ca6725);
+    background: -webkit-linear-gradient(to left, var(--secondary-black-color) 30%, var(--primary-orange-color));
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #000000 30%, #ca6725);
+    background: linear-gradient(to left, var(--secondary-black-color) 30%, var(--primary-orange-color));
     box-shadow: black;
     border-color: black;
 }
 
-form input[type="submit"]:hover{
-    background: #000000;
+.btn:hover{
+    background: var(--secondary-black-color);
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #000000 30%, #ca6725);
+    background: -webkit-linear-gradient(to right, var(--secondary-black-color) 30%, var(--primary-orange-color));
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #000000 30%, #ca6725);
+    background: linear-gradient(to right, var(--secondary-black-color) 30%, var(--primary-orange-color));
     transform: scale(1.2);
 }
 
@@ -240,6 +250,9 @@ footer{
         width: 100%;
         max-height: 400px;
     }
+    form input{
+        font-size: 16px;
+    }
 }
 
 /* media queries for mobiles */
@@ -261,7 +274,7 @@ footer{
         padding: 0 1rem 0 0;
     }
     .nav-link{
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .main-container{
         grid-template-columns: 50px 1fr 50px ;
